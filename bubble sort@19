@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int a[10],i,j,temp,n;
+    int count=0;
+    printf("\n Enter the max no.of Elements to Sort: \n");
+    scanf("%d",&n);
+    printf("\n Enter the Elements : \n");
+    for(i=0; i<n; i++)
+    {
+    	count++;
+        scanf("%d",&a[i]);
+    }
+    count++;
+    for(i=0; i<n; i++)
+        for(j=i+1; j<n; j++)
+        {
+        	count++;
+            if(a[i]>a[j])
+            {
+            	count++;
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+            count++;
+        }
+		count++;
+    for(i=0; i<n; i++)
+    {
+    	count++;
+        printf("%d\t",a[i]);
+    }
+    printf("time complexity:%d",count);
+    return 0;
+}
