@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int num,r,sum=0,temp;
+	int count=0;
+	printf("enter the number: ");
+	scanf("%d",&num);
+	for(temp=num;num!=0;num=num/10)
+	{
+		r=num%10;
+		sum=sum+(r*r*r);
+	}
+	count++;
+	if(sum==temp)
+	{
+		printf("the entered number is armstrong number\n");
+	}
+	else
+	{
+		printf("the entered number is not an armstrong number\n");
+	}
+	count++;
+	count++;
+	printf("time complexity:%d",count);
+}
