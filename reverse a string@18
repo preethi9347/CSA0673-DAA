@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+  char str[1000], rev[1000];
+  int i, j, count1= 0;
+  int count=0;
+  printf("enter the string: ");
+  scanf("%s", str);
+  printf("\nString Before Reverse: %s", str);
+  while (str[count1] != '\0')
+  {
+    count1++;
+  }
+  j = count1 - 1;
+  for (i = 0; i < count1; i++)
+  {
+  	count++;
+    rev[i] = str[j];
+    j--;
+  }
+  count++;
+ 
+  printf("\nString After Reverse: %s\n", rev);
+  printf("time complexity:%d",count);
+}
